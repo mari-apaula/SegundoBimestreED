@@ -1,11 +1,9 @@
 # SegundoBimestreED
 Segundo Bimestre
 
-Semana 8: Listas dinamicas 
+Semana 9: Listas Enlazadas(Ejercicio posicion de paquetes/amistad)
 
-Semana 9:
-
-Semana 10:
+Semana 10:Listas Enlazadas 
 
 Semana 11: Liatas circulares(Con Fabián)
 
