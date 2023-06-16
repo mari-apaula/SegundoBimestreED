@@ -9,21 +9,19 @@ package paquetedos;
  * @author SALA I
  */
 public class Ejecutor {
+
     public static void main(String[] args) {
         ListasDoblemteEnlazadas lista = new ListasDoblemteEnlazadas();
-        
-        
+
         lista.insertarDelante(8);
         lista.insertarDelante(2);
         lista.insertarDelante(11);
-        
         lista.imprimir();
-        lista.imprimirAtras();
-        
-        
 
+        lista.eliminar(2);
 
-        
+        lista.imprimir();
+
     }
-    
+
 }
