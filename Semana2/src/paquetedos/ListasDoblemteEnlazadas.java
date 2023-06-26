@@ -17,8 +17,8 @@ public class ListasDoblemteEnlazadas {
         Node previo;
         Node next;
 
-        public Node(int dato) {
-            this.dato = dato;
+        public Node(int d) {
+            dato = d;
         }
     }
     Node cabeza = null;

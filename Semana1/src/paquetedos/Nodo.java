@@ -10,19 +10,19 @@ package paquetedos;
  */
 public class Nodo {
     int dato;
-    Nodo next;
+    Nodo siguiente;
     
     public Nodo() {
         dato = 0;
-        next = null;
+        siguiente = null;
     }
     
     public Nodo(int a) {
         dato = a;
-        next = null;
+        siguiente = null;
     }
     
-    public void concatenandoNext(Nodo nod) {
-        next = nod;
+    public void concatenandoSiguiente(Nodo nod) {
+        siguiente = nod;
     }
 }

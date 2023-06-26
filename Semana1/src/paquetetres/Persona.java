@@ -24,7 +24,14 @@ public class Persona {
     
     public String toString(int n, Persona p) {
         String mensaje = "";
-       mensaje = String.format("%sPersona\n idenfificación: %d\nTipo: %s\nAmigo: %s\n", mensaje, id, tipo, amistad);
+       mensaje = String.format("%sPersona\n"
+               + "Idenfificación: %d\n"
+               + "Tipo: %s\n"
+               + "Amigo: %s\n", 
+               mensaje, 
+               id, 
+               tipo, 
+               amistad);
         return mensaje;
     }
 }

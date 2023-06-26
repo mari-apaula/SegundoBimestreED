@@ -17,16 +17,15 @@ public class Ejecutor {
         // Nodo abjB = new Nodo();
         Nodo objB = new Nodo(4);
         System.out.println(objB);
-        
-        objA.concatenandoNext(objB);
-        System.out.println("Next A: " + objA.next);
-        
+
+        objA.concatenandoSiguiente(objB);
+        System.out.println("Next A: " + objA.siguiente);
+
         Nodo objC = new Nodo(11);
         System.out.println(objC);
-        objB.concatenandoNext(objC);
-        System.out.println("Next B: " + objB.next);
-        System.out.println("Next C: " + objC.next);
-
+        objB.concatenandoSiguiente(objC);
+        System.out.println("Next B: " + objB.siguiente);
+        System.out.println("Next C: " + objC.siguiente);
 
     }
 }
