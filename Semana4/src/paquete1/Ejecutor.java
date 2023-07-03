@@ -18,12 +18,14 @@ public class Ejecutor {
     public static void main(String[] args) {
         
         
-        Nodo bt = new Nodo(0);
+        ArbolBinarioBusqueda bt = new ArbolBinarioBusqueda();
         
-        bt.add(8);
-        bt.add(6);
-        bt.add(7);
-        bt.add(5);
+        bt.abb(8);
+        bt.abb(6);
+        bt.abb(7);
+        bt.abb(5);
+        
+        
 
 
         
