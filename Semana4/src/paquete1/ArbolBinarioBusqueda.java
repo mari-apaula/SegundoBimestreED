@@ -11,37 +11,37 @@ package paquete1;
 public class ArbolBinarioBusqueda {
 
     Nodo raiz;
-    
+
     public Nodo abbRecursividad(Nodo current, int dato) {
         if (current == null) { // comprueba si la raiz es nula
             return new Nodo(dato);
         }
-        
+
         // asiganamos a la parte izquierda
         if (dato < current.dato) { // comprueba si el dato es menor a la raiz
             current.izquierda = abbRecursividad(current.izquierda, dato);
-            
-        }else if(dato > current.dato){ // 
+
+        } else if (dato > current.dato) { // 
             current.derecho = abbRecursividad(current.derecho, dato);
-        }else{
-                // el dato existe
-                return current;
-                }
-        
+        } else {
+            // el dato existe
+            return current;
+        }
+
         // devuelce una nueva raiz o pone una nueva raiz
         return current; // para devolver la raiz
-        
+
     }
-    
+
     public void abb(int dato) {
         raiz = abbRecursividad(raiz, dato);
     }
-    
-    private Nodo eliminarRecursividad(Nodo current, int dato){
+
+    private Nodo eliminarRecursividad(Nodo current, int dato) {
         if (current == null) {
             return null;
         }
-        
+
         if (dato == current.dato) {
             // pregunta si el dato es igual al current
             if (current.izquierda == null && current.derecho == null) {
@@ -57,23 +57,46 @@ public class ArbolBinarioBusqueda {
             current.derecho = eliminarRecursividad(current.derecho, datoPequenio);
             return current;
         }
-        
+
         if (dato < current.dato) {
             current.izquierda = eliminarRecursividad(current.izquierda, dato);
             return current;
         }
         current.izquierda = eliminarRecursividad(current.derecho, dato);
-        
+
         return current;
     }
-    
-    private int encontrarDatoPequenio(Nodo raiz){
-        return raiz.derecho == null? raiz.dato: encontrarDatoPequenio(raiz.izquierda);
+
+    private int encontrarDatoPequenio(Nodo raiz) {
+        return raiz.derecho == null ? raiz.dato : encontrarDatoPequenio(raiz.izquierda);
     }
-    
-    public void eliminar( int dato){
+
+    public void eliminar(int dato) {
         raiz = eliminarRecursividad(raiz, dato);
     }
-        
-}
 
+    public void preOrden(Nodo nodo) {
+        if (nodo != null) {
+            System.out.println("" + nodo.dato);
+            preOrden(nodo.izquierda);
+            preOrden(nodo.derecho);
+        }
+    }
+
+    public void enOrden(Nodo nodo) {
+        if (nodo != null) {
+            enOrden(nodo.izquierda);
+            System.out.println("" + nodo.dato);
+            enOrden(nodo.derecho);
+        }
+    }
+    
+    public void postOrden(Nodo nodo) {
+        if (nodo != null) {
+            postOrden(nodo.izquierda);
+            postOrden(nodo.derecho);
+            System.out.println("" + nodo.dato);
+
+        }
+    }
+}
